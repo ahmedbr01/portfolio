@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio de Jean Dupont - Développeur full-stack passionné par la création d'applications web modernes">
+    <meta name="keywords" content="développeur, full-stack, portfolio, javascript, react, nodejs, python">
+    <meta name="author" content="Jean Dupont">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Jean Dupont - Développeur Full-Stack">
+    <meta property="og:description" content="Découvrez mes projets et compétences en développement web">
+    <meta property="og:image" content="https://ton-site.netlify.app/images/apercu.jpg">
+    <meta property="og:url" content="https://ton-site.netlify.app">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jean Dupont - Portfolio">
+    <meta name="twitter:description" content="Développeur full-stack, découvrez mes réalisations">
+    <meta name="twitter:image" content="https://ton-site.netlify.app/images/apercu.jpg">
+    
+    <title>Jean Dupont - Développeur Full-Stack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">JD</div>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil">
+            <h1>Jean Dupont</h1>
+            <h2>Développeur Full-Stack</h2>
+            <p>Passionné par la création d'applications web innovantes et performantes</p>
+            <div class="social-links">
+                <a href="https://github.com/ton-utilisateur" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/ton-utilisateur" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/ton-utilisateur" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </section>
+
+        <section id="projets">
+            <h2>Mes Projets</h2>
+            <div class="projets-grid">
+                <div class="projet-card">
+                    <img src="images/projet1.jpg" alt="Application de gestion de tâches">
+                    <h3>TaskMaster Pro</h3>
+                    <p>Application de gestion de tâches collaborative avec React et Node.js</p>
+                    <div class="projet-links">
+                        <a href="https://github.com/ton-utilisateur/taskmaster" target="_blank">
+                            <i class="fab fa-github"></i> Voir le code
+                        </a>
+                        <a href="https://taskmaster-demo.netlify.app" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Démo
+                        </a>
+                    </div>
+                </div>
+                <div class="projet-card">
+                    <img src="images/projet2.jpg" alt="Site e-commerce">
+                    <h3>ShopEase</h3>
+                    <p>Plateforme e-commerce avec panier intelligent et paiement Stripe</p>
+                    <div class="projet-links">
+                        <a href="https://github.com/ton-utilisateur/shopease" target="_blank">
+                            <i class="fab fa-github"></i> Voir le code
+                        </a>
+                        <a href="https://shopease-demo.netlify.app" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Démo
+                        </a>
+                    </div>
+                </div>
+                <div class="projet-card">
+                    <img src="images/projet3.jpg" alt="Application météo">
+                    <h3>WeatherNow</h3>
+                    <p>Application météo temps réel avec API OpenWeatherMap</p>
+                    <div class="projet-links">
+                        <a href="https://github.com/ton-utilisateur/weathernow" target="_blank">
+                            <i class="fab fa-github"></i> Voir le code
+                        </a>
+                        <a href="https://weathernow-demo.netlify.app" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Me Contacter</h2>
+            <form action="https://formspree.io/f/ton-id-formspree" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nom" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Envoyer le message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jean Dupont. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</body>
+</html>
