@@ -1,45 +1,17 @@
-# Configuration de base du build
 [build]
-  publish = "."                     # Dossier à publier (ici le dossier racine)
-  command = "npm run build"         # Commande pour construire le site (optionnel)
-
-# Configuration des en-têtes HTTP
+  publish = "."    
+  
 [[headers]]
-  for = "/*"                        # Pour toutes les pages du site
+  for = "/*"
   [headers.values]
-    # Sécurité : empêche l'affichage dans une iframe (protection contre le clickjacking)
     X-Frame-Options = "DENY"
-    
-    # Protection contre les attaques XSS
     X-XSS-Protection = "1; mode=block"
-    
-    # Empêche le navigateur de deviner le type MIME
     X-Content-Type-Options = "nosniff"
-    
-    # Contrôle comment le navigateur fait suivre le referrer
     Referrer-Policy = "strict-origin-when-cross-origin"
-    
-    # Contrôle les fonctionnalités du navigateur autorisées
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    
-    # Cache : met en cache pour 1 an, fichiers immutables
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Configuration des redirections
 [[redirects]]
-  from = "/*"                        # Toutes les URLs
-  to = "/index.html"                 # Redirige vers index.html
-  status = 200                       # Code HTTP 200 (OK) - utile pour les SPA
-
-# Redirection simple (permanente)
-[[redirects]]
-  from = "/github"                    # URL: vottresite.com/github
-  to = "https://github.com/ton-utilisateur"  # Redirige vers GitHub
-  status = 301                        # 301 = redirection permanente
-
-# Redirection avec force HTTPS
-[[redirects]]
-  from = "http://*"                   # Toutes les requêtes HTTP
-  to = "https://:splat"               # Vers la version HTTPS
-  status = 301                        # Redirection permanente
-  force = true                        # Force la redirection
+  from = "/*"
+  to = "/index.html"
+  status = 200
